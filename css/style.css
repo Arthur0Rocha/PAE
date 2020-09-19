@@ -1,5 +1,9 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 html, body{height: 100%;}
+a{
+    text-decoration: none;
+    color: inherit;
+}
 /*
     Grid | sizing
 */
@@ -78,7 +82,17 @@ header > section > div{
     padding: 10px;
     border: rgba(255,255,255,0.1) solid 1px;
     cursor: pointer;
+    transition: 0.2s;
 }
+.menu li.selected{
+    background-color: rgba(255,255,255,1);
+    color: black;
+}
+.menu li:hover{
+    background-color: rgba(255,255,255,0.9);
+    color: black;
+}
+
 .top nav i{
     display: none;
     font-size: 30px;
@@ -90,10 +104,27 @@ header > section > div{
     cursor: pointer;
 }
 .logo{
-    background-color: #000;
+    background-color: #fff;
     border-radius: 50%;
-    padding: 4px 3px 0 3px;
-    border: 1px rgba(255,255,255,0.9) solid;
+    width: 64px;
+    opacity: 100%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.logo:hover{
+    opacity: 70%;
+    background-color: rgba(255,255,255,1);
+}
+nav i{
+    transition: 0.2s;
+}
+nav i:hover{
+    opacity: 70%;
+}
+.logo img{
+    position: relative;
+    top: 2px;
+    left: 2px;
 }
 
 
@@ -106,7 +137,6 @@ main{
 }
 
 main > section{
-    border: 1px solid rgba(0,0,0,.5);
     box-shadow: 5px 10px 50px;
     display: flex;
     flex-direction: column;
@@ -149,18 +179,121 @@ main > section{
 .card-text p{
     font-size: 16px;
 }
-main > section > button{
+main > section button{
     width: 200px;
     padding: 15px;
     background-color: #a43031;
     color: #f1f1f1;
-    margin: 10px auto;
     border: 1px solid #777;
     border-radius: 15px;
     font-size: 20px;
     cursor: pointer;
+    transition: 0.2s;
+}
+main > section button:hover{
+    background-color: #d43031;
+}
+main > section button.breve{
+    background-color: #555;
+    color: #ddd;
+    cursor: initial;
+}
+main > section a{
+    margin: 10px auto;
+    border-radius: 15px;
 }
 
+table.protocolo{
+    margin: 0 auto;
+    width: 98%;
+    max-width: 1000px;
+}
+table.protocolo th, table.protocolo td{
+    padding: 3px;
+}
+table.protocolo tr{
+    text-align: center;
+    background-color: #e7e7ff;
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table.protocolo tr td.img{
+    background-color: #333;
+    background-size: contain;
+    color: white;
+    padding: 50px 10px;
+}
+table.protocolo tr.IIA td.img{
+    background-image: url(../images/img2.jpg);
+}
+table.protocolo .IIA p{
+    background-color: rgba(0,0,0,.8);
+}
+
+
+footer form *{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+footer form h2{
+    color: white;
+    font-size: 35px;
+}
+footer form input, textarea{
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 3px solid #333;
+}
+footer form input:focus, textarea:focus{
+    border: 3px solid #73f;
+}
+footer form textarea{
+    height: 200px;
+    resize: none;
+}
+footer form input[type=submit]{
+    background-color: #5643ff;
+    color: white;
+    border: 0;
+    border-radius: 7px;
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    transition: 0.2s;
+    cursor: pointer;
+}
+footer form input[type=submit]:hover{
+    background-color: #6653ff;
+}
+footer form{
+    max-width: 800px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+}
+footer div{
+    color: white;
+    background-color: #333;
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.wapp{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.wapp:hover{
+    opacity: 80%;
+}
 
 @media only screen and (max-width: 900px) {
     main{
@@ -172,6 +305,27 @@ main > section > button{
     }
     .top nav ul{
         display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 98%;
+    }
+    .top nav ul li{
+        display: block;
+        text-align: center;
+        border-radius: 7px;
+        background-color: rgba(0,0,0,.9);
+        margin-bottom: 1px;
+    }
+    .top nav ul li.selected{
+        background-color: rgba(255,255,255,.8);
+        border: solid 1px rgba(0,0,0,.9);
+        color: black;
+    }
+    .top nav ul li:hover{
+        background-color: rgba(255,255,255,0.8);
+        border: solid 1px rgba(0,0,0,.6);
+        color: black;
     }
     .top .container-top{
         width: 60%;
@@ -185,6 +339,14 @@ main > section > button{
     .logo img{
         width: 45px;
     }
+    .logo{
+        width: 48px;
+    }
+    .wapp{
+        bottom: 5px;
+        right: 5px;
+        width: 60px;
+    }
   }
 
 @media only screen and (min-width: 1650px) {
@@ -195,4 +357,5 @@ main > section > button{
         grid-template-columns: auto auto auto auto;
         margin: 0 auto;
     }
+    
 }

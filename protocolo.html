@@ -27,10 +27,10 @@
                         <nav class="menu">
                             <i onclick="document.getElementById('menu-toggle').style.display=(document.getElementById('menu-toggle').style.display==='block')?'':'block';" class="fa fa-bars" aria-hidden="true"></i>
                             <ul id="menu-toggle">
-                                <a href="index.html"><li class="selected">HOME</li></a>
+                                <a href="index.html"><li>HOME</li></a>
                                 <a href="o-que-e-pae.html"><li>O QUE É PAE?</li></a>
                                 <a href="gravacao.html"><li>GRAVAÇÃO</li></a>
-                                <a href="protocolo.html"><li>PROTOCOLO</li></a>
+                                <a href="protocolo.html"><li class="selected">PROTOCOLO</li></a>
                                 <a href="avancado.html"><li>AVANÇADO</li></a>
                             </ul>
                         </nav>
@@ -40,41 +40,46 @@
         </section>
     </header>
     
-    <main class="container-content">
-        <section class="oqueeh-pae">
-            <div class="card-img"></div>
-            <div class="card-text">
-                <h2>O que é PAE?</h2>
-                <p>Como o procedimento é realizado?</p>
-                <p>Entendendo a anatomia vascular da pelve.</p>
-            </div>
-            <a href="o-que-e-pae.html"><button>Saiba mais!</button></a>
-        </section> 
-        <section class="como-gravar-imgs">
-            <div class="card-img"></div>
-            <div class="card-text">
-                <h2>Gravação das imagens.</h2>
-                <p>Instruções para preparar as imagens após o fim do procedimento.</p>
-            </div>
-            <a href="gravacao.html"><button>Saiba mais!</button></a>
-        </section>
-        <section class="protocolo">
-            <div class="card-img"></div>
-            <div class="card-text">
-                <h2>Protocolo de aquisições.</h2>
-                <p>Instruções sobre os parâmetros das aquisições durante o procedimento.</p>
-            </div>
-            <a href="protocolo.html"><button>Saiba mais!</button></a>
-        </section>
-        <section class="avancado">
-            <div class="card-img"></div>
-            <div class="card-text">
-                <h2>Softwares avançados.</h2>
-                <p>Instruções sobre as ferramentas avaçadas de imagem.</p>
-            </div>
-            <a href="avancado.html"><button>Saiba mais!</button></a>
-        </section>
-    </main>
+    <div class="container-content minh">
+        <table class="protocolo">
+            <tr>
+                <th>Aquisição</th>
+                <th>Parâmetros imagem</th>
+                <th>Parâmetros injeção</th>
+                <th>Observações</th>
+            </tr>
+            <tr class="FLUORO">
+                <td class="img"><p><strong>*</strong> Fluoroscopias</p></td>
+                <td>4 fps ou próximo disso</td>
+                <td>-</td>
+                <td>Minimizar os parâmetros para baixar ao máximo a dose sem comprometer a qualidade de imagem.</td>
+            </tr>
+            <tr class="IIA">
+                <td class="img"><p><strong>1</strong> - 3D da ilíaca interna</p></td>
+                <td>Rotação: 5s<br>40°/s<br>Delay Rx: 6s</td>
+                <td>2 ml/s<br>22 ml<br>300 psi</td>
+                <td>No Sírio: com subtração.<br><br>Objetivo: encontrar artéria prostática e navegar até ela. Utilizar softwares avançados para fazer o overlay na fluoroscopia.</td>
+            </tr>
+            <tr class="DSAPA">
+                <td class="img"><p><strong>2</strong> - DSA da artéria prostática</p></td>
+                <td>1 fps</td>
+                <td>Manual</td>
+                <td></td>
+            </tr>
+            <tr class="CBCTPA">
+                <td class="img"><p><strong>3</strong> - 3D da artéria prostática</p></td>
+                <td>Rotação: 5s<br>40°/s<br>Delay Rx: 10s</td>
+                <td>0.3 ml/s<br>4.8 ml<br>600 psi</td>
+                <td>Aquisição nem sempre realizada, apenas em caso de dúvidas de risco de embolização não alvo.</td>
+            </tr>
+            <tr class="DSAEMB">
+                <td class="img"><p><strong>4</strong> - DSAs durante embolização</p></td>
+                <td>0.5 fps</td>
+                <td>Manual</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
     
     <footer class="bg-black minh">
         <!--Pequena seção sobre quem sou eu e a minha experiencia com PAE
