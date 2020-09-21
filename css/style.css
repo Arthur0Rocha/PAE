@@ -137,7 +137,7 @@ main{
 }
 
 main > section{
-    box-shadow: 5px 10px 50px;
+    box-shadow: 5px 10px 10px #888888;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -203,6 +203,54 @@ main > section a{
     border-radius: 15px;
 }
 
+div.oqehpae{
+    box-shadow: 10px 10px 12px #888888;
+    border-radius: 20px;
+    background-color: #fafafa;
+    border: 1px solid rgba(0,0,0,.1);
+    width: 95%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 1%;
+    font-size: 18px;
+    
+}
+div.oqehpae > div{
+    margin: 20px 0;
+    text-align: justify;
+}
+div.oqehpae > div.oqe1 > h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+div.oqehpae div.oqe1{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 40px;
+    align-items: center;
+}
+div.oqehpae div.oqe1 h2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+div.oqehpae div.oqe1 img{
+    width: 100%;
+}
+div.oqehpae div.oqe2{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    align-items: center;
+    margin-top: 30px;
+}
+div.oqehpae div.oqe2 .tipos img{
+    width: 100%;
+}
+div.oqehpae div.oqe2 > p{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
 table.protocolo{
     margin: 0 auto;
     width: 98%;
@@ -232,6 +280,27 @@ table.protocolo .IIA p{
     background-color: rgba(0,0,0,.8);
 }
 
+table.gravacao{
+    width: 98%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+table.gravacao .criep{
+    min-width: 200px;
+    max-width: 400px;
+    padding: 50px 0;
+    background-image: url(../images/criep.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+table.gravacao tr td{
+    padding: 25px 50px;
+    font-size: 20px;
+}
+table.gravacao tr td ol li{
+    margin-top: 20px;
+}
 
 footer form *{
     display: block;
@@ -270,6 +339,8 @@ footer form input[type=submit]:hover{
     background-color: #6653ff;
 }
 footer form{
+    display: none;/*TODO implementar o envio de email*/
+
     max-width: 800px;
     width: 95%;
     margin: 0 auto;
@@ -299,6 +370,13 @@ footer div{
     main{
         grid-template-columns: auto;
         width: 100%;
+    }
+    div.oqehpae div.oqe1, div.oqehpae div.oqe2{
+        grid-template-columns: auto;
+    }
+    div.oqehpae div.oqe1 h2, div.oqehpae div.oqe2 p{
+        grid-column-start: 1;
+        grid-column-end: 2;
     }
     .top nav i{
         display: inline-block;
@@ -352,6 +430,7 @@ footer div{
 @media only screen and (min-width: 1650px) {
     .container-content{
         max-width: none;
+        width: 95%;
     }
     main{
         grid-template-columns: auto auto auto auto;
