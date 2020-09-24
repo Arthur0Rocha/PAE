@@ -153,16 +153,26 @@ main > section{
     border-radius: 20px 20px 0 0;
 }
 .oqueeh-pae .card-img{
-    background-image: url(../images/img1.jpg);
+    background-image: url(../images/IIA-PA-red.png);
 }
 .como-gravar-imgs .card-img{
-    background-image: url(../images/img2.jpg);
+    background-image: url(../images/cbctpa.png);
 }
 .protocolo .card-img{
-    background-image: url(../images/img3.jpg);
+    background-image: url(../images/vision.png);
 }
 .avancado .card-img{
-    background-image: url(../images/img4.jpg);
+    background-image: url(../images/prototype.png);
+}
+.embo-assist .card-img{
+    background-image: url(../images/embo-assist.jpg);
+    background-position: right;
+}
+.embolization-guidance .card-img{
+    background-image: url(../images/embo-siemens.jpg);
+}
+.embo-guide .card-img{
+    background-image: url(../images/embo-philips.jpg);
 }
 .card-text{
     padding: 10px;
@@ -245,6 +255,10 @@ div.oqehpae div.oqe2{
 }
 div.oqehpae div.oqe2 .tipos img{
     width: 100%;
+    background-color: black;
+}
+div.tipo4 img{
+    padding: 25px 0;
 }
 div.oqehpae div.oqe2 > p{
     grid-column-start: 1;
@@ -272,12 +286,29 @@ table.protocolo tr td.img{
     background-size: contain;
     color: white;
     padding: 50px 10px;
+    max-width: 130px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+table.protocolo tr.FLUORO td.img{
+    background-image: url(../images/vision.png);
 }
 table.protocolo tr.IIA td.img{
-    background-image: url(../images/img2.jpg);
+    background-image: url(../images/IIA-PA-red.png);
 }
-table.protocolo .IIA p{
-    background-color: rgba(0,0,0,.8);
+table.protocolo tr.DSAPA td.img{
+    background-image: url(../images/dsa-pa.jpg);
+}
+table.protocolo tr.CBCTPA td.img{
+    background-image: url(../images/axial.png);
+}
+table.protocolo tr.DSAEMB td.img{
+    background-image: url(../images/perfected.jpg);
+}
+table.protocolo p{
+    background-color: rgba(0,0,0, 0.2);
+    
 }
 
 table.gravacao{
@@ -367,10 +398,34 @@ footer div{
 }
 
 @media only screen and (max-width: 900px) {
+    .mobile-hide{
+        display: none;
+    }
+    .mobile-show{
+        display: initial;
+    }
     main{
         grid-template-columns: auto;
         width: 100%;
     }
+    main > section {
+        width: 100%;
+        max-width: 350px;
+    }
+    .card-text{
+        height: 90px;
+    }
+    .card-text h2{
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    .card-text p{
+        font-size: 12px;
+    }
+    table.gravacao .criep{
+        min-width: 100px;
+        padding: 0;
+    }    
     div.oqehpae div.oqe1, div.oqehpae div.oqe2{
         grid-template-columns: auto;
     }
@@ -426,6 +481,12 @@ footer div{
         width: 60px;
     }
   }
+@media only screen and (max-width: 360px){
+    table.protocolo{
+        font-size: 12px;
+    }
+    
+}
 
 @media only screen and (min-width: 1650px) {
     .container-content{
